@@ -12,12 +12,7 @@ class Problem_2
     array_fibbo = []
 
     (1..@range).each do |number|
-      if number == 1
-        array_fibbo << number
-        next
-      end
-
-      if number == 2
+      if number == 1 or number == 2
         array_fibbo << number
         next
       end
@@ -43,6 +38,3 @@ class Problem_2
 end
 
 Problem_2.new(range: 4_000_000).execute
-
-# 1,2,3,5,8,..
-

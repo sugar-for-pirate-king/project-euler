@@ -24,7 +24,7 @@ class Problem2
     total_of_even_array(collection_number)
   end
 
-  # Get all the sum even number of array
+  # Get the sum of all even number
   def total_of_even_array(array)
     array.select { |number| number % 2 == 0 } .sum
   end

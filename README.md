@@ -11,4 +11,6 @@ We use git-flow, and follows this step:
 5. Create pull request and finish `$> git flow feature finish your-feature`.
 
 ## License
-MIT License. All Right Reserved.
+MIT License.
+
+All Right Reserved.

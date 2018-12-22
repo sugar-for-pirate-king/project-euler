@@ -23,17 +23,26 @@ class Problem_2
       end
 
       total = prev_number + next_number
-      array_fibbo << total
+
+      if total < 4_000_000
+        array_fibbo << total
+      else
+        break
+      end
 
       prev_number = next_number
       next_number = total
     end
 
-    array_fibbo.sum
+    puts total_of_even_values(array_fibbo)
+  end
+
+  def total_of_even_values(array)
+    array.select { |number| number % 2 == 0 }.sum
   end
 end
 
-puts Problem_2.new(range: 5).execute
+Problem_2.new(range: 4_000_000).execute
 
 # 1,2,3,5,8,..
 

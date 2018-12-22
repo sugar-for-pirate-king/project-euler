@@ -10,7 +10,7 @@ class Integer
   end
 end
 
-class Problem_1
+class Problem1
   def initialize(options)
     @max_number = options[:max_number]
   end
@@ -26,5 +26,5 @@ class Problem_1
   end
 end
 
-puts Problem_1.new(max_number: 1000000000).execute
+puts Problem1.new(max_number: 1_000_000).execute
 

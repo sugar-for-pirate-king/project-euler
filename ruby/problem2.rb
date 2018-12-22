@@ -4,7 +4,7 @@
 # All right reserved
 #
 
-class Problem_2
+class Problem2
   def initialize; end
 
   def execute
@@ -30,4 +30,4 @@ class Problem_2
   end
 end
 
-puts Problem_2.new.execute
+puts Problem2.new.execute

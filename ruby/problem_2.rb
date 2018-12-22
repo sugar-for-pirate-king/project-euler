@@ -1,40 +1,33 @@
+#
+# Solution to Project Euler problem 2
+# Copyright (c) Philip Lambok.
+# All right reserved
+#
+
 class Problem_2
-  def initialize(options)
-    @range = options[:range]
-  end
+  def initialize; end
 
   def execute
-    total = 0
+    total_number, prev_number, next_number = 0, 1, 2
 
-    prev_number = 1
-    next_number = 2
+    collection_number = [prev_number, next_number]
 
-    array_fibbo = []
+    while total_number < 4_000_000
+      total_number = prev_number + next_number
 
-    (1..@range).each do |number|
-      if number == 1 or number == 2
-        array_fibbo << number
-        next
-      end
+      collection_number << total_number
 
-      total = prev_number + next_number
-
-      if total < 4_000_000
-        array_fibbo << total
-      else
-        break
-      end
-
-      prev_number = next_number
-      next_number = total
+      # Update prev and next number
+      prev_number, next_number = next_number, total_number
     end
 
-    puts total_of_even_values(array_fibbo)
+    total_of_even_array(collection_number)
   end
 
-  def total_of_even_values(array)
-    array.select { |number| number % 2 == 0 }.sum
+  # Get all the sum even number of array
+  def total_of_even_array(array)
+    array.select { |number| number % 2 == 0 } .sum
   end
 end
 
-Problem_2.new(range: 4_000_000).execute
+puts Problem_2.new.execute

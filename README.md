@@ -1,5 +1,5 @@
 # Project Euler Solution
-This is project to sharing [project euler](https://projecteuler.net) solution.
+A project for sharing [project euler](https://projecteuler.net) solution.
 
 ## Contributing
 We use git-flow, and follows this step:
